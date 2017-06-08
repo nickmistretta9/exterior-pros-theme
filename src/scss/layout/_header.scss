@@ -1,0 +1,79 @@
+.site-header {
+	padding:15px 0;
+	.logo {
+		margin-top:25px;
+		@include max-width(800px) {
+			width:100%;
+			text-align: center;
+		}
+	}
+	.angies {
+		text-align: center;
+		@include max-width(800px) {
+			// width:100%;
+			// margin-top:15px;
+			display:none;
+		}
+		.images {
+			img {
+				width:100px;
+				&:last-child {
+					width:130px;
+				}
+			}
+		}
+
+	}
+	.phone {
+		float:right;
+		text-align: center;
+		margin-top:40px;
+		@include max-width(800px) {
+			float:none;
+			width:100%;
+			text-align: center;
+			margin-top:10px;
+		}
+		.cta {
+			font-size:20px;
+			font-weight:bold;
+			span {
+				display:none;
+				@include max-width(650px) {
+					display:inline-block;
+				}
+			}
+		}
+		.number {
+			font-size:30px;
+			margin-top:-5px;
+			font-weight:bold;
+			@include max-width(875px) {
+				font-size:26px;
+			}
+			@include max-width(650px) {
+				background:$brand-primary;
+				padding:10px 0;
+				max-width:80%;
+				margin:0 auto 10px;
+				display:block;
+				@include shadow();
+				font-size:24px;
+			}
+			a {
+				text-decoration:none;
+				color:#000;
+				@include max-width(650px) {
+					color:#fff;
+				}
+				&:before {
+					content:url('../images/phone.png');
+					margin-right:10px;
+					@include max-width(650px) {
+						content:'';
+					}
+				}
+			}
+		}
+	}
+}

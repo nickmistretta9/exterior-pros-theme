@@ -1,0 +1,96 @@
+.sidebar {
+	.widget {
+		background:$brand-grey;
+		margin-bottom:20px;
+		padding:15px;
+		.widgettitle {
+			background:$brand-info;
+			color:#fff;
+			text-align: center;
+			font-size:24px;
+			padding:10px;
+			margin:-15px -15px 0;
+			span {
+				font-style:italic;
+			}
+		}
+		&.coupon {
+			.coupon-content {
+				border:3px dashed $brand-success;
+				margin:0 -15px -15px;
+				.coupon-offer {
+					font-size:24px;
+					text-align: center;
+					color:$brand-info;
+					padding:15px;
+					span {
+						color:$brand-success;
+						font-style:italic;
+					}
+				}
+				.coupon-date {
+					font-size:12px;
+					text-align: center;
+					color:#000;
+				}
+			}
+		}
+		&.form {
+			.form-control {
+				margin-top:15px;
+				border-radius:0;
+			}
+			.btn-primary {
+				width:100%;
+				padding:10px;
+				text-transform: uppercase;
+				margin-top:10px;
+				font-size:22px;
+				border:none;
+				transition:all 0.3s ease-in-out;
+				&:hover {
+					background:$brand-success;
+				}
+			}
+		}
+		&.why-us {
+			padding-left:0;
+			padding-right:0;
+			.widgettitle {
+				margin:-15px 0 0;
+			}
+			ul {
+				padding-left:0;
+				li {
+					list-style-type:none;
+					width:100%;
+					border-bottom:2px solid $brand-primary;
+					font-size:20px;
+					text-align: center;
+					padding:15px 30px;
+					&:last-child {
+						border-bottom:none;
+						padding-bottom:0;
+					}
+				}
+			}
+		}
+		&.hours {
+			ul {
+				padding-left:0;
+				list-style-type:none;
+				margin-bottom:0;
+				margin-top:10px;
+				li {
+					padding:10px;
+					text-align: center;
+					&.active {
+						background:$brand-primary;
+						color:#fff;
+						margin:0 -15px;
+					}
+				}
+			}
+		}
+	}
+}

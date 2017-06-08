@@ -1,0 +1,17 @@
+.blog-content {
+	h1 {
+		text-align:left !important;
+		a {
+			text-decoration:none;
+		}
+	}
+	.btn {
+		background:$brand-primary;
+		color:#fff;
+		transition:all 0.3s ease-in-out;
+		margin-bottom: 10px;
+		&:hover {
+			background:$brand-success;
+		}
+	}
+}

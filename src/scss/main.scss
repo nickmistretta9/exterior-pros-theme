@@ -1,0 +1,31 @@
+@import
+  'base/reset',
+  'vendor/bootstrap',
+  'vendor/font-awesome';
+
+@import
+  'utils/mixins';
+
+@import
+  'base/base',
+  'base/fontstack',
+  'base/typography',
+  'base/no-gutters',
+  'base/wordpress';
+
+@import
+  'layout/header', 
+  'layout/body',
+  'layout/nav',
+  'layout/sidebar',
+  'layout/footer';
+
+@import
+   'modules/blog',
+   'modules/slick',
+   'modules/form',
+	  'modules/aos',
+	  'modules/magnific';
+
+@import
+  'pages/home';

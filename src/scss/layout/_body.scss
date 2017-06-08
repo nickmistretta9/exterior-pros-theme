@@ -1,0 +1,166 @@
+.hero {
+	&.inner-hero {
+		position:relative;
+		img {
+			width:100%;
+			@include max-width(800px) {
+				width:auto;
+				max-width:none;
+				height:250px;
+			}
+		}
+		.overlay {
+			@include linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+			height:100%;
+			width:100%;
+			position:absolute;
+			top:0;
+			left:0;
+		}
+		.h1 {
+			position:absolute;
+			@include center();
+			color:#fff;
+		}
+	}
+}
+
+.main-content {
+	.checklist-box {
+		margin-top:20px;
+		background:$brand-grey;
+		padding:10px;
+		p {
+			font-size:18px;
+			color:$brand-info;
+		}
+		ul {
+			list-style-type:none;
+			padding-left:0;
+			li {
+				&:before {
+					content:'\f00c';
+					font-family:FontAwesome;
+					color:$brand-primary;
+					margin-right:5px;
+				}
+			}
+		}
+	}
+	.content {
+		&.inner-content {
+			@include max-width($screen-sm) {
+				text-align: center;
+			}
+			h1 {
+				text-align:left;
+				@include max-width($screen-sm) {
+					text-align: center;
+				}
+			}
+			hr {
+				width:60%;
+				float:left;
+				@include max-width($screen-sm) {
+					float:none;
+				}
+			}
+			.frame {
+				@include max-width($screen-sm) {
+					margin-top:20px;
+				}
+
+			}
+			.title {
+				font-size:32px;
+				margin-top:25px;
+				span {
+					color:$brand-primary;
+				}
+			}
+			img:last-child {
+				@include max-width($screen-sm) {
+					margin:10px 0 30px;
+				}
+			}
+			.row {
+				margin-top:0 !important;
+				&.angies-awards {
+					img {
+						width:150px;
+					}
+				}
+			}
+			.checklist {
+				list-style-type:none;
+				padding-left:0;
+				li {
+					&:before {
+						content:'\f00c';
+						font-family:FontAwesome;
+						color:$brand-success;
+						margin-right:10px;
+					}
+					span {
+						font-weight:bold;
+					}
+				}
+			}
+			.testimonial {
+				font-size:18px;
+				&:before {
+					content:'\f10d';
+					font-family:FontAwesome;
+					color:$brand-primary;
+					opacity:0.4;
+					margin-right:-20px;
+					font-size:40px;
+				}
+			}
+			.test-outer {
+				border:3px solid $brand-primary;
+				padding:25px 20px;
+				margin:0 10px;
+				background:lighten($brand-grey, 10%);
+			}
+			.author {
+				float:right;
+				font-weight:bold;
+				font-size:20px;
+				margin-right:10px;
+				color:$brand-success;
+				span {
+					color:$brand-info;
+					font-weight:normal;
+					font-style:italic;
+					font-size:18px;
+					float:right;
+					margin-right:5px;
+				}
+			}
+		}
+		&.contact-content {
+			text-align: center;
+			h1 {
+				color:$brand-info;
+			}
+			iframe {
+				margin-top:25px;
+			}
+		}
+	}
+}
+
+.certifications {
+	background:$brand-grey;
+	padding:10px;
+}
+
+.gallery-item {
+	margin-top:10px;
+	img {
+		@include shadow();
+		padding:5px;
+		background:$brand-success;
+	}
+}

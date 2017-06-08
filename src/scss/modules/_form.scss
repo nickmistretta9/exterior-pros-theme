@@ -1,0 +1,22 @@
+.form {
+	background:$brand-grey;
+	padding:15px;
+	form {
+		.form-control {
+			margin-top:15px;
+			border-radius:0;
+		}
+		.btn-primary {
+			width:100%;
+			padding:10px;
+			text-transform: uppercase;
+			margin-top:10px;
+			font-size:22px;
+			border:none;
+			transition:all 0.3s ease-in-out;
+			&:hover {
+				background:$brand-success;
+			}
+		}
+	}
+}

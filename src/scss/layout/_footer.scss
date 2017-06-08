@@ -1,0 +1,93 @@
+.site-footer {
+	padding:40px 0;
+	background-image:url('../images/footer-bg.jpg');
+	background-repeat:no-repeat;
+	background-size:cover;
+	position:relative;
+	color:#fff;
+	min-height:300px;
+	@include max-width($screen-sm) {
+		text-align: center;
+	}
+	.overlay {
+		@include linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+		height:100%;
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.title {
+		font-size:32px;
+	}
+	.fa-phone, .fa-envelope, .fa-map {
+		color:lighten($brand-primary, 10%);
+		font-size:30px;
+		margin-right:10px;
+	}
+	.phone, .location, .email {
+		padding-left:45px;
+		i {
+			margin-left:-45px;
+		}
+	}
+	.location, .email {
+		margin-top:20px;
+	}
+	.social {
+		a {
+			color:#fff;
+			text-decoration:none;
+		}
+		.fa-facebook, .fa-twitter, .fa-instagram {
+			font-size:36px;
+			margin:50px 10px 0;
+			background:$brand-primary;
+			border-radius:50%;
+			width:60px;
+			height:60px;
+			line-height:60px;
+			text-align: center;
+			transition:all 0.5s ease-in-out;
+			&:hover {
+				transform:rotate(360deg) scale(1.2);
+			}
+			@include max-width($screen-sm) {
+				margin-top:0;
+				margin-bottom:20px;
+			}
+		}
+		.fa-facebook {
+			margin-left:0;
+		}
+	}
+	.coupon {
+		background:rgba(#fff, 0.9);
+		border:3px dashed $brand-success;
+		padding:10px;
+		.offer {
+			color:#000;
+			font-size:24px;
+			text-align: center;
+			span {
+				color:$brand-primary;
+				font-style:italic;
+			}
+		}
+		.date {
+			font-size:12px;
+			color:#000;
+			text-align: center;
+		}
+	}
+}
+
+.footer-bottom {
+	background:#000;
+	color:#fff;
+	text-align: center;
+	padding:10px 0;
+	@include max-width(500px) {
+		font-size:14px;
+	}
+}

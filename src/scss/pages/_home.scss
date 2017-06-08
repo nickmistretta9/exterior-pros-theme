@@ -1,0 +1,601 @@
+.hero {
+	position:relative;
+	.hero-slider {
+		position:relative;
+		div {
+			img {
+				width:100%;
+				@include max-width($screen-sm) {
+					width:auto;
+					max-width:none;
+					height:300px;
+				}
+				&.hero1  {
+					@include max-width($screen-sm) {
+						transform:translateX(-20%);
+					}
+				}
+				&.hero3 {
+					@include max-width($screen-sm) {
+						transform:translateX(-35%);
+					}
+				} 
+			}
+			.caption {
+				position:absolute;
+				@include center(x);
+				top:20%;
+				color:#fff;
+				text-align: center;
+				@include max-width(1300px) {
+					top:15%;
+				}
+				@include max-width($screen-sm) {
+					top:0;
+				}
+
+				.h2 {
+					font-size:60px;
+					text-shadow:2px 2px 5px $brand-info;
+					@include max-width(1300px) {
+						font-size:48px;
+					}
+					@include max-width(990px) {
+						font-size:30px;
+					}
+					@include max-width(500px) {
+						font-size:24px;
+					}
+				}
+				.desc {
+					margin-top:10%;
+					font-size:24px;
+					@include max-width(1300px) {
+						font-size:20px;
+						margin-top:5%;
+					}
+					@include max-width($screen-sm) {
+						font-size:16px;
+					}
+					@include max-width(500px) {
+						font-size:13px;
+					}
+				}
+			}
+		}
+	}
+	.slick-prev {
+		left:25px;
+		z-index:9999 !important;
+		&:before {
+			content:'\f053';
+			font-family:FontAwesome;
+			color:#fff;
+			font-size:30px;
+		}
+	}
+	.slick-next {
+		right:25px;
+		&:before {
+			content:'\f054';
+			font-family:FontAwesome;
+			color:#fff;
+			font-size:30px;
+		}
+	}
+	.slick-slider {
+		margin-bottom:0;
+	}
+	// .service-row {
+	// 	position:relative;
+	// 	.row {
+	// 		position:absolute;
+	// 		margin-top:-80px;
+	// 		@include center(x);
+	// 		width:100%;
+	// 		.col-sm-4 {
+	// 			text-align: center;
+	// 			img {
+	// 				@include shadow();
+	// 			}
+	// 			.subtitle {
+	// 				margin-top:10px;
+	// 				color:#000;
+	// 				font-weight:bold;
+	// 				font-size:20px;
+	// 			}
+	// 			.desc {
+	// 				max-width:350px;
+	// 				margin:0 auto;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+.main-content {
+	padding:40px 0;
+	// margin-top:250px;
+	h1 {
+		text-align: center;
+		span {
+			color:$brand-primary;
+		}
+	}
+	hr {
+		border-top:1px solid $brand-success;
+		width:40%;
+		margin-top:-5px;
+	}
+	.row {
+		// position:relative;
+		margin-top:50px;
+		.content {
+			position:relative;
+			@include max-width($screen-sm) {
+				text-align: center;
+			}
+			p {
+				font-size:18px;
+				@include max-width(850px) {
+					font-size:16px;
+				}
+			}
+			.btn-primary {
+				width:40%;
+				padding:15px;
+				border:none;
+				font-size:24px;
+				display:block;
+				transition:all 0.3s ease-in-out;
+				text-align: center;
+				margin-top:50px;
+				a {
+					color:#fff;
+					text-decoration:none;
+				}
+				&:hover {
+					background:$brand-success;
+				}
+				@include max-width($screen-sm) {
+					margin:20px auto;
+				}
+				@include max-width($screen-xs) {
+					width:auto;
+				}
+			}
+		}
+	}
+	.top {
+		right:0;
+		background:$brand-primary;
+		padding:10px;
+		margin-right:15px;
+		position:fixed;
+		z-index:9999;
+		bottom:10px;
+		@include shadow();
+		@include max-width(460px) {
+			bottom:80px;
+		}
+		a {
+			color:#fff;
+			text-decoration:none;
+			.fa-arrow-up {
+				font-size:20px;
+			}
+		}
+	}
+	.van-area {
+		min-height:400px;
+		position:relative;
+		@include max-width(1200px) {
+			display:none;
+		}
+		.van {
+			margin-top:25px;
+			&.animated {
+				animation-name:drive;
+				animation-timing-function:linear;
+				animation-iteration-count:1;
+				animation-duration:5s;
+				animation-fill-mode:forwards;
+			}
+		}
+		.back-wheel, .front-wheel {
+			height:100px;
+			width:100px;
+			position:absolute;
+			// margin-top:200px;
+			margin-top:213px;
+		}
+		.back-wheel {
+			&.animated {
+				animation-name:spin, back-spin;
+				animation-timing-function:linear;
+				animation-iteration-count:1;
+				animation-duration:5s;
+				animation-fill-mode:forwards;
+			}
+		}
+		.front-wheel {
+			&.animated {
+				animation-name:spin, front-spin;
+				animation-timing-function:linear;
+				animation-iteration-count:1;
+				animation-duration:5s;
+				animation-fill-mode:forwards;
+			}
+		}
+		@keyframes drive {
+			0% {
+				margin-left:-100%;
+			}
+			100% {
+				margin-left:15%;
+			}
+		}
+		@keyframes back-spin {
+			0% {
+				left:-90%;
+				// margin-left:-1500px;
+			}
+			100% {
+				left:297px;
+				// margin-left:-730px
+			}
+		}
+		@keyframes front-spin {
+			0% {
+				left:-50%;
+			}
+			100% {
+				left:740px;
+			}
+		}
+		@keyframes spin {
+			0% {
+				transform:rotate(0);
+			}
+			100% {
+				transform:rotate(360deg);
+			}
+		}
+	}
+	.van-small {
+		display:none;
+		@include max-width(1200px) {
+			display:block;
+			text-align: center;
+		}
+		img {
+			margin:0 auto;
+		}
+	}
+}
+
+.services {
+	padding:40px 0;
+	text-align: center;
+	.title {
+		text-align: center;
+		font-size:36px;
+		span {
+			color:$brand-primary;
+		}
+	}
+	hr {
+		border-top:1px solid $brand-success;
+		margin-top:-5px;
+		width:15%;
+	}
+	.row {
+		margin-top:60px;
+		@include max-width($screen-sm) {
+			margin-top:0;
+		}
+		.service-image {
+			position:relative;
+			overflow:hidden;
+			.overlay {
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:100%;
+				@include linear-gradient(rgba($brand-primary, 0.8), rgba($brand-primary, 0.5));
+				transition:all 0.3s ease-in-out;
+				&:hover {
+					opacity:0;
+				}
+			}
+			img {
+				width:100%;
+			}
+		}
+		.subtitle {
+			font-weight:bold;
+			font-size:20px;
+			margin-top:20px;
+			a {
+				color:#000;
+				text-decoration:none;
+			}
+		}
+		.col-sm-4 {
+			.btn-sm {
+				transition:all 0.3s ease-in-out;
+				&:hover {
+					background:$brand-success;
+				}
+				a {
+					color:#fff;
+					text-decoration:none;
+				}
+			}
+			&:first-child {
+				.desc {
+					text-align:left;
+					@include max-width($screen-sm) {
+						text-align: center;
+					}
+				}
+			}
+			&:nth-child(2), &:last-child {
+				@include max-width($screen-sm) {
+					margin-top: 20px;
+				}
+			}
+			&:last-child {
+				.desc {
+					text-align:right;
+					@include max-width($screen-sm) {
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}
+
+.awards {
+	position:relative;
+	padding:40px 0;
+	border-top:5px solid $brand-primary;
+	border-bottom:5px solid $brand-primary;
+	background-image:url('../images/awards-bg.jpg');
+	background-attachment:fixed;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	min-height:400px;
+	.overlay {
+		@include linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.5));
+		height:100%;
+		width:100%;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	.title {
+		color:#fff;
+		position:absolute;
+		text-align: center;
+		@include center(x);
+		font-size:36px;
+		@include max-width(600px) {
+			font-size:28px;
+		}
+	}
+	.row {
+		margin-top:130px;
+		text-align: center;
+		@include max-width(500px) {
+			margin-top:170px;
+		}
+		img {
+			width:150px;
+			&.first {
+				width:100px;
+			}
+		}
+	}
+	.testimonials {
+		.testimonial {
+		font-size:18px;
+		&:before {
+			content:'\f10d';
+			font-family:FontAwesome;
+			color:$brand-primary;
+			opacity:0.4;
+			margin-right:-20px;
+			font-size:40px;
+		}
+	}
+	.test-outer {
+		border:3px solid $brand-primary;
+		padding:25px 20px;
+		margin:0 10px;
+		background:#fff;
+	}
+	.author {
+		float:right;
+		font-weight:bold;
+		font-size:20px;
+		margin-right:10px;
+		color:#fff;
+		span {
+			color:$brand-primary;
+			font-weight:normal;
+			font-style:italic;
+			font-size:18px;
+			float:right;
+			margin-right:5px;
+		}
+	}
+	.slick-dots {
+		li {
+			button {
+				&:before {
+					font-size:34px;
+					color:$brand-primary;
+					opacity:0.8;
+				}
+			}
+			&.slick-active button:before {
+				color:#fff;
+			}
+		}
+	}
+	}
+}
+
+.service-areas {
+	position:relative;
+	min-height:400px;
+	@include max-width($screen-sm) {
+		min-height:600px;
+	}
+	#map {
+		height:100%;
+		width:100%;
+		top:0;
+		position:absolute;
+		left:0;
+		z-index:0;
+		@include max-width($screen-sm) {
+			margin-top:200px;
+		}
+	}
+	.areas {
+		position:absolute;
+		top:0;
+		right:100px;
+		height:400px;
+		background:$brand-info;
+		padding:20px 40px;
+		max-width:400px;
+		@include max-width(1500px) {
+			left:0;
+		}
+		@include max-width($screen-sm) {
+			max-width:none;
+			width:100%;
+			height:300px;
+		}
+		.h3 {
+			color:#fff;
+			white-space:nowrap;
+			margin:0;
+			padding-bottom:15px;
+			text-transform: uppercase;
+			text-align: center;
+		}
+		.scrollBox {
+			overflow:hidden;
+			overflow-y:scroll;
+			max-height:300px;
+			padding:0;
+			@include max-width($screen-sm) {
+				max-height:200px;
+			}
+			ul {
+				margin:0;
+				padding-left:0;
+				list-style-type:none;
+				li {
+					color:#fff;
+					text-align: center;
+					border-bottom:1px solid #444470;
+					padding:8px 0;
+				}
+			}
+			p {
+				text-align: center;
+				color:#fff;
+				padding-top:8px;
+			}
+		}
+	}
+	::-webkit-scrollbar {
+		width:12px;
+	}
+	::-webkit-scrollbar-track {
+		-webkit-box-shadow:inset 0 0 6px rgba($brand-success,0.3);
+		-webkit-border-radius:10px;
+		border-radius:10px;
+	}
+	::-webkit-scrollbar-thumb {
+		-webkit-border-radius:10px;
+		border-radius:10px;
+		background:rgba($brand-primary,0.8);
+		-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
+	}
+	::-webkit-scrollbar-thumb:window-inactive {
+		background:rgba(255,0,0,0.4);
+	}
+
+}
+
+.testimonials {
+	padding:40px 0 80px;
+	.title {
+		font-size:36px;
+		margin-bottom:30px;
+		text-align: center;
+		span {
+			color:$brand-primary;
+		}
+	}
+	hr {
+		border-top:1px solid $brand-success;
+		margin-top:-20px;
+		width:15%;
+	}
+	.testimonial {
+		font-size:18px;
+		&:before {
+			content:'\f10d';
+			font-family:FontAwesome;
+			color:$brand-primary;
+			opacity:0.4;
+			margin-right:-20px;
+			font-size:40px;
+		}
+	}
+	.test-outer {
+		border:3px solid $brand-primary;
+		padding:25px 20px;
+		margin:0 10px;
+		background:lighten($brand-grey, 10%);
+	}
+	.author {
+		float:right;
+		font-weight:bold;
+		font-size:20px;
+		margin-right:10px;
+		color:$brand-success;
+		span {
+			color:$brand-info;
+			font-weight:normal;
+			font-style:italic;
+			font-size:18px;
+			float:right;
+			margin-right:5px;
+		}
+	}
+	.slick-dots {
+		li {
+			button {
+				&:before {
+					font-size:34px;
+					color:$brand-success;
+					opacity:0.8;
+				}
+			}
+			&.slick-active button:before {
+				color:#000;
+			}
+		}
+	}
+}
