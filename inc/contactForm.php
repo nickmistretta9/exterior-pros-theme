@@ -1,7 +1,8 @@
 <form action="https://drivenlocal.wufoo.com/forms/wmea0x302dzt4e/#public" method="post" id="contactForm">
-	<input type="text" class="form-control" name="Field1" placeholder="Name*" required>
-	<input type="text" class="form-control" name="Field2" placeholder="Phone*" required>
-	<input type="email" class="form-control" name="Field3" placeholder="Email*" required>
+	<input type="text" class="form-control" name="Field1" placeholder="First Name*" required autocomplete="first-name">
+	<input type="text" class="form-control" name="Field7" placeholder="Last Name*" required autocomplete="last-name">
+	<input type="text" class="form-control" name="Field2" placeholder="Phone*" required autocomplete="tel">
+	<input type="email" class="form-control" name="Field3" placeholder="Email*" required autocomplete="email">
 	<select name="Field4" id="" class="form-control">
 		<option selected disabled>Project Type</option>
 		<option value="Roofing">Roofing</option>
