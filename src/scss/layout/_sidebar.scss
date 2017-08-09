@@ -52,6 +52,12 @@
 					background:$brand-success;
 				}
 			}
+			.g-recaptcha {
+				margin:10px;
+				div {
+					width:100% !important;
+				}
+			}
 		}
 		&.why-us {
 			padding-left:0;

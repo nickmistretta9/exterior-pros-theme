@@ -144,6 +144,16 @@
 			h1 {
 				color:$brand-info;
 			}
+			.form {
+				.g-recaptcha {
+					margin:10px auto;
+					display:block;
+					div {
+						width:100% !important;
+						height:100px !important;
+					}
+				}
+			}
 			iframe {
 				margin-top:25px;
 			}
