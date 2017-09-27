@@ -36,7 +36,8 @@ Template Name: Home Page
 <section class="services">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-sm-4" data-aos-duration="1800" data-aos-once="true" data-aos-delay="700" data-aos="fade-right">
+			<!--  data-aos-duration="1800" data-aos-once="true" data-aos-delay="700" data-aos="fade-right" -->
+			<div class="col-sm-4">
 				<div class="service-image">
 					<a href="roofing.php"><div class="overlay"></div>
 					<img src="<?php bloginfo('template_directory'); ?>/images/roofing-service.jpg"></a>
@@ -45,7 +46,7 @@ Template Name: Home Page
 				<p class="desc">Call us today and have one of our consultants out. They will measure your roof, go over the various product options available, and give you an exact price to the penny. We are known across the area for our great crews, great service, and best of all, our price.</p>
 				<button class="btn-sm btn-primary"><a href="<?php the_permalink(28); ?>">Learn More</a></button>
 			</div>
-			<div class="col-sm-4" data-aos-duration="1800" data-aos-once="true" data-aos-delay="700" data-aos="fade-down">
+			<div class="col-sm-4">
 				<div class="service-image">
 					<a href="#"><div class="overlay"></div>
 					<img src="<?php bloginfo('template_directory'); ?>/images/window-service.jpg"></a>
@@ -54,7 +55,7 @@ Template Name: Home Page
 				<p class="desc">Exceptional craftsmanship and remarkable energy-saving performance—Berkshire Elite is everything you’re looking for in a quality replacement window, and more. </p>
 				<button class="btn-sm btn-primary"><a href="<?php the_permalink(20); ?>">Learn More</a></button>
 			</div>
-			<div class="col-sm-4" data-aos-duration="1800" data-aos-once="true" data-aos-delay="700" data-aos="fade-left">
+			<div class="col-sm-4">
 				<div class="service-image">
 					<a href="#"><div class="overlay"></div>
 					<img src="<?php bloginfo('template_directory'); ?>/images/siding-service.jpg"></a>
@@ -69,16 +70,16 @@ Template Name: Home Page
 <section class="main-content" id="post-<?php the_ID(); ?>">
 	<div class="top"><a href="#top" class="backtotop"><i class="fa fa-arrow-up"></i></a></div>
 	<div class="container-fluid">
-		<h1 data-aos-duration="1200" data-aos-once="true" data-aos-delay="700" data-aos="fade-up">Welcome To <span>Exterior Pros</span></h1> <hr>
+		<h1>Welcome To <span>Exterior Pros</span></h1> <hr>
 		<div class="row">
-			<div class="col-sm-8 content" data-mh data-aos-duration="1500" data-aos-once="true" data-aos-delay="1200" data-aos="flip-down">
+			<div class="col-sm-8 content" data-mh>
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<?php the_content(); ?>
 				<?php endwhile; else: ?>
 				<?php endif; ?>
 				<button class="btn-primary"><a href="<?php the_permalink(8); ?>">Learn More</a></button>
 			</div>
-			<div class="col-sm-4 sidebar" data-mh data-aos-duration="1500" data-aos-once="true" data-aos-delay="1400" data-aos="fade-right">
+			<div class="col-sm-4 sidebar">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

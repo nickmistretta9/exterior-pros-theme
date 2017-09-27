@@ -36,7 +36,7 @@
 ================================================== -->
 <script src="<?php bloginfo('template_directory'); ?>/js/script.min.js"></script>
 <!-- Google Maps API -->
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCw6C9ZIYlYM1OBfZyVmz6_7mBpEM3HzVY&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw6C9ZIYlYM1OBfZyVmz6_7mBpEM3HzVY&callback=initMap" async defer></script>
 
 
 	<?php wp_footer(); ?>
