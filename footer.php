@@ -4,7 +4,7 @@
 		<div class="col-sm-4">
 			<p class="title">Contact Us</p>
 			<p class="phone"><i class="fa fa-phone"></i> 262-456-3530</p>
-			<p class="location"><i class="fa fa-map"></i> W134N4973 Campbell Dr <br> Menomonee Falls, WI 53051</p>
+			<p class="location"><i class="fa fa-map"></i> W227 N6270 Sussex Rd <br> Sussex, WI 53089</p>
 			<p class="email"><i class="fa fa-envelope"></i> Info@extpros.com</p>
 		</div>
 		<div class="col-sm-4 social">
