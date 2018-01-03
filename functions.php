@@ -38,6 +38,15 @@ add_shortcode( 'contactForm', 'contactForm_shortcode' );
 // Enable shortcodes in text widgets
 add_filter('widget_text','do_shortcode');
 
+// Contact Form Include Shortcode
+function employeeForm_shortcode() {
+ob_start();
+include (TEMPLATEPATH . '/inc/employeeForm.php');
+$return_string = ob_get_clean();
+return $return_string;
+}
+add_shortcode( 'employeeForm', 'employeeForm_shortcode' );
+
 
 add_filter('widget_text','execute_php',100);
 function execute_php($html){
